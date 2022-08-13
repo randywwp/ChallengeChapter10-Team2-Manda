@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Form, Button, Container, Alert } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "../context/Auth";
-import { signInWithGoogle } from '../services/firebase'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { useAuthState } from "react-firebase-hooks/auth"
+import { signInWithGoogle } from '../utils/firebase'
+
 
 export const Login = () => {
   const [user, setUser] = useState({
@@ -14,7 +16,7 @@ export const Login = () => {
 
   const { login } = useAuth();
 
-  const navigate = useNavigate();
+  const router = useRouter();
 
   function handleSetUser(event) {
     const { name, value } = event.target;
@@ -95,9 +97,9 @@ export const Login = () => {
               </div>
               <div className="text-center pt-3">
                 Need an account?{" "}
-                <Link to="/register" className="link">
-                  Register
-                </Link>
+                <p>
+                 Register <Link href="/register">here</Link> for new account.
+                </p>
               </div>
             </Form>
           </div>

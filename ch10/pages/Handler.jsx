@@ -3,7 +3,7 @@ import gunting from "../assets/gunting.png";
 import kertas from "../assets/kertas.png";
 import refresh from "../assets/refresh.png";
 import { useState, useEffect } from "react";
-import { db } from "../services/firebase";
+import { db } from '../utils/firebase'
 import {
   doc,
   setDoc,

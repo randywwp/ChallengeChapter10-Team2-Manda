@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Form, Button, Container } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 import { useAuth } from "../context/Auth";
 
 
@@ -16,7 +17,7 @@ export const Register = () => {
 
   const { register } = useAuth();
 
-  const navigate = useNavigate();
+  const router = useRouter();
 
   function handleSetUser(event) {
     const { name, value } = event.target;
@@ -103,7 +104,7 @@ export const Register = () => {
               </div>
               <div className="text-center pt-3">
                 Already have an account?{" "}
-                <Link to="/login" className="link">
+                <Link href="/login" className="link">
                   Login
                 </Link>
               </div>

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from 'next/link'
 import { Card } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -26,7 +26,7 @@ export const Home = () => {
           <Card.Text>Please feel free to</Card.Text>
           <Button variant="warning" >            
           <Link
-              to="/login"
+              href="/login"
               style={{ textDecoration: "none", color: "white" }}>
               Login
             </Link>
@@ -36,7 +36,7 @@ export const Home = () => {
           <p>OR</p>
           <Button variant="warning">
             <Link
-              to="/register"
+              href="/register"
               style={{ textDecoration: "none", color: "white" }}
             >
               Register

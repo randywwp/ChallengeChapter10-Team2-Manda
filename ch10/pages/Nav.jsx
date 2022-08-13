@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import Link from 'next/link'
 import { useAuth } from "../context/Auth";
 
 export const Nav = () => {
@@ -16,7 +16,7 @@ export const Nav = () => {
           </div>
           <div className="col pt-1">
             <Link
-              to="/login"
+              href="/login"
               onClick={logout}
               className="btn btn-primary btn-sm"
             >

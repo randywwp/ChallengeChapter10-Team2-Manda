@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Form, Button, Container, Alert } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import Link from 'next/link'
 import { useAuth } from "../context/Auth";
 
 export const ResetPassword = () => {

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Form, Button, Container, Alert } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 import { useAuth } from "../context/Auth";
 
 export const UpdateProfile = () => {
@@ -17,7 +18,7 @@ export const UpdateProfile = () => {
 
   const { updateName, updateMail, currentUser, gantiPassword } = useAuth();
 
-  const navigate = useNavigate();
+  const router = useRouter();
 
   function handleSetUser(event) {
     const { name, value } = event.target;
@@ -133,7 +134,7 @@ export const UpdateProfile = () => {
                 </Button>
               </div>
               <div className="text-center pt-3">
-                <Link to="/" className="link">
+                <Link href="/" className="link">
                   Cancel
                 </Link>
               </div>

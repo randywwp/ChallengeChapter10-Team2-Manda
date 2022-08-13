@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from 'next/link'
 import rps from "../assets/rps.png";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
