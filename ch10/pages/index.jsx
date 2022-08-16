@@ -1,0 +1,12 @@
+export { Register } from "./Register";
+export { Dashboard } from "./Dashboard";
+export { UpdateProfile } from "./UpdateProfile";
+export { Login } from "./Login";
+export { ResetPassword } from "./ResetPassword";
+export { Profile } from "./Profile";
+export { GameList } from "./GameList";
+export { Nav } from "./Nav";
+export { Rps } from "./Rps";
+export { Tables } from "./Tables";
+export { Handler } from "./Handler";
+export { Home } from "./LandingPage";
